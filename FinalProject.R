@@ -32,10 +32,10 @@ library(ggraph)
 
 
 
-consumerKey <- "***"
-consumerSecret <- "***"
-accessToken <- "***"
-accessTokenSecret <- "***"
+consumerKey <- ""
+consumerSecret <- ""
+accessToken <- ""
+accessTokenSecret <- ""
 
 #Authenticate to the Twitter Rest API 
 create_token(app = "Kafka Course Starter", consumerKey, consumerSecret,
@@ -44,11 +44,11 @@ create_token(app = "Kafka Course Starter", consumerKey, consumerSecret,
 
 
 #Search for the relevant tag for your analysis
-azure_tweets_search<-search_tweets("#Azure OR #azurecloud OR azure", n = 1020, lang='en', type = "mixed", include_rts = FALSE,
+azure_tweets_search<-search_tweets("#Azure OR #azurecloud OR azure AND -from:azure", n = 2202, lang='en', type = "mixed", include_rts = FALSE,
                             geocode =NULL, max_id = NULL, parse = TRUE, token = NULL,verbose = TRUE)
-aws_tweets_search<-search_tweets("#AWS OR #awscloud OR amazoncloud", n = 1300, lang='en', type = "mixed", include_rts = FALSE,
+aws_tweets_search<-search_tweets("#AWS OR #awscloud OR amazoncloud", n = 3152, lang='en', type = "mixed", include_rts = FALSE,
                                    geocode =NULL, max_id = NULL, parse = TRUE, token = NULL, verbose = TRUE)
-google_tweets_search<-search_tweets("#GoogleCloud OR #GCPCloud OR googlecloud", n = 1020, lang='en', type = "mixed", include_rts = FALSE,
+google_tweets_search<-search_tweets("#GoogleCloud OR #GCPCloud OR googlecloud OR #gcp", n = 10020, lang='en', type = "mixed", include_rts = FALSE,
                                    geocode =NULL, max_id = NULL, parse = TRUE, token = NULL, verbose = TRUE)
 
 

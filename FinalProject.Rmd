@@ -3,6 +3,9 @@ title: "Final Project RIT"
 author: "Saeed"
 date: "May 10, 2019"
 output:
+  word_document:
+    toc: yes
+    toc_depth: '5'
   pdf_document:
     toc: yes
     toc_depth: '5'
@@ -15,9 +18,6 @@ output:
     toc_depth: 3
     toc_float: yes
     df_print: paged
-  word_document:
-    toc: yes
-    toc_depth: '5'
 ---
 
 ```{r echo=FALSE,fig.cap="", out.width = '100%'}
